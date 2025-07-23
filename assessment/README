@@ -1,0 +1,39 @@
+# 📄 PDF Content Analysis and Question Generation Tool
+
+## 🧠 Overview
+This project is a Python-based tool designed to extract text and images from educational PDF files. It organizes the extracted data into a structured JSON format, making it suitable for applications such as automated question generation, e-learning tools, and content indexing.
+
+---
+
+## 📂 Features
+- ✅ Extracts text from each page of a PDF.
+- 🖼️ Extracts and saves all embedded images per page.
+- 📄 Generates a structured `output.json` with:
+  - Page number
+  - Question text (first line of page text or placeholder)
+  - Main image
+  - Option images
+- 💾 Saves all images with page and image number.
+
+---
+
+## 📁 Folder Structure
+
+---
+
+## ⚙️ Requirements
+Install required Python libraries:
+```bash
+pip install PyMuPDF Pillow
+python main.py
+[
+  {
+    "page": 1,
+    "question": "What comes next?",
+    "images": "images/page1_image1.png",
+    "option_images": [
+      "images/page1_image2.png",
+      "images/page1_image3.png"
+    ]
+  }
+]
